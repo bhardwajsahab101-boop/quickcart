@@ -1,16 +1,18 @@
-import React from 'react'
-import Header from './components/Header'
-import Products from "../components/Products"
+import React from "react";
+import Header from "./components/Header";
+import Productlist from "./components/Productlist";
+import { products } from "./data/products";
+import "./styles/App.css";
+
 function App() {
   return (
-    <>
-    <Header/>
-      <Products/>
-      <div className='main_heading'>
-        <h1>Quick Cards</h1>
-      </div>
-    </>
-  )
+    <div className="app">
+      <Header />
+      <main className="main-content">
+        <Productlist products={products} />
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
